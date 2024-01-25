@@ -1,6 +1,6 @@
 # Caso para Analista de Dados CRM - iFood
-
-Tradução do case original em inglês para português. O texto original está [neste arquivo PDF](./iFood%20Data%20Analyst%20Case.pdf) baixado do [repositório do GitHub da iFood](https://github.com/ifood/ifood-data-business-analyst-test) para este case.
+- The original text in English is [in this PDF file](./iFood%20Data%20Analyst%20Case.pdf). Download by [GitHub da iFood](https://github.com/ifood/ifood-data-business-analyst-test).
+- Tradução do case original em inglês para português. Baixado do [repositório do GitHub da iFood](https://github.com/ifood/ifood-data-business-analyst-test) para este case.
 
 ## Texto de apresentação
 
