@@ -1,4 +1,5 @@
-# Case Ifood
+# Case Ifood - Data Advanced Analytics
+
 This repository was made to explain the project of **[Github Ifood](https://github.com/ifood/ifood-data-business-analyst-test)**:
 
 **The comments in the codes are in PT-BR**.
@@ -72,6 +73,7 @@ offer were properly labeled.
 ## Step 6: Considerations and results.
 
 - With the pipeline performing preprocessing, PCA, K-Means, GridSearchCV, LogisticRegression, RandomUnderSampler, KNeighborsClassifier, DecisionTreeClassifier, among others, the dataset was segmented into 3 clusters.
+- I believe that by classifying into 3 clusters, we will achieve more success in upcoming marketing campaigns.
 
 **Cluster 0**:
 
@@ -105,4 +107,3 @@ Has_Children | Income | Age | Education | Accepted_Cmp_Total | Mnt_Total | Clust
 High | Moderate | High | Moderate | Moderate | Moderate | 0 
 High | Low | Low | Low | Low | Low | 1
 Low | High | Moderate | High | High | High | 2
-
