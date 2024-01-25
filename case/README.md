@@ -52,7 +52,7 @@ Além disso, além de maximizar o lucro da campanha, o CMO está interessado em 
 
 O conjunto de dados contém recursos sociodemográficos e firmográficos sobre 2.240 clientes que foram contatados. Além disso, contém um rótulo para aqueles clientes que responderam à campanha, comprando o produto.
 
-Dicionário de dados disponível [na pasta `data`](../data/README.md).
+Dicionário de dados disponível [na pasta `data`](../data/Metadata.md).
 
 ## Entregáveis
 
