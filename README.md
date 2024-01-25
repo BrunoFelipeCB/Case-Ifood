@@ -42,30 +42,67 @@ offer were properly labeled.
 - Graphically examining the behavior of clusters in relation to some columns, as shown in the graph below.
 ![pairplot](images///pairplot_clusters.png)
 ## [Step 3: Clustering_PCA](https://github.com/BrunoFelipeCB/Case-Ifood/blob/main/notebooks/03-%20Clustering_PCA.ipynb)
-
+- For PCA, I imported the same dataset with the new features and dropped columns.
+- Separating the columns for each type of preprocessing.
+- From the Auxiliary_functions file, brought in Elbow and Silhouette Method graphs to assist in choosing the number of clusters.
+- Creating the pipeline and performing clustering, now with PCA, limiting the components to 2 to visualize the clusters in 2D.
+- Labeling the clusters (the labels will be in Step 6).
+- Graphically showing the centroids.
+- Demonstrating the separation of clusters, as shown in the graph below.
+![pca](images///pca_clusters.png)
 ## [Step 4: Classification.](https://github.com/BrunoFelipeCB/Case-Ifood/blob/main/notebooks/04-%20Classification.ipynb)
-
+- Importing the pre-clustered dataset.
+- Splitting the dataset for training.
+- -Separating the columns for each type of preprocessing, adding the 'cluster' column, and removing the 'Response' column.
+- Utilizing three libraries commonly used in classification models, and employing the DummyClassifier library as a benchmark; any model with worse performance than it will be discarded.
+- Creating the results dictionary for later creation of a dataframe and model comparisons.
+- Generating a graph of the metrics used (see graph below) and selecting Logistic Regression as the model to be fine-tuned with hyperparameters.
+- ![comparing_models](images///comparing_models.png)
 ## [Step 5: Classification_logreg.](https://github.com/BrunoFelipeCB/Case-Ifood/blob/main/notebooks/05-%20Classification_logreg.ipynb)
-
+- Importing the pre-clustered dataset.
+- Splitting the dataset for training.
+- Separating the columns for each type of preprocessing, adding the 'cluster' column, and removing the 'Response' column.
+- Using only the Logistic Regression model, still without hyperparameters, to graphically visualize the ROC curve and Precision-Recall curve.
+- Tuning hyperparameters with the GridSearchCV library.
+- Checking the best hyperparameters for the model.
+- Graphically displaying information for each metric.
+- Creating another pipeline, now incorporating the found hyperparameters.
+- Assessing the importance of each column for labeling a customer, with negative importance indicating the most significant factors for a negative response to the marketing campaign and positive importance indicating the most significant factors for a positive response to the marketing campaign.
+- Visualizing the ROC curve and Precision-Recall curve graphically.
 ## Step 6: Considerations and results.
 
-- With the pipeline performing preprocessing, PCA, and K-Means, the dataset was segmented into 4 clusters, as shown in the figures below:
+- With the pipeline performing preprocessing, PCA, K-Means, GridSearchCV, LogisticRegression, RandomUnderSampler, KNeighborsClassifier, DecisionTreeClassifier, among others, the dataset was segmented into 3 clusters.
 
-![pairplot](imagens/pairplot.png)
+**Cluster 0**:
 
-![boxplot](imagens/boxplot.png)
+- Intermediate income
+- Intermediate spending
+- Likely to have children
+- Likely to accept campaigns
+- Older age group
 
-- Cluster 0 consists of older individuals with intermediate salaries and scores.
-- Cluster 1 consists of younger individuals with intermediate salaries and higher scores.
-- Cluster 2 consists of wealthier individuals with lower scores.
-- Cluster 3 consists of middle-aged individuals with high salaries and high scores.
+**Cluster 1**:
+
+- Low income
+- Low spending
+- Likely to have children
+- Low likelihood to accept campaigns
+- Only cluster with a significant percentage of individuals with basic education
+- Younger age group
+
+**Cluster 2**:
+
+- High income
+- High spending
+- Very likely to not have children
+- More inclined to accept campaigns
+- Cluster without individuals with basic education
+- No distinctive age profile
 
 #### Translating the points above into a table:
-
-| Spending Score (1-100) | Annual Income (k$)    | Age      | Cluster |
-| -----------------------| --------------------- | -------- | ------- |
-| Moderate               | Moderate              | High     | 0       |
-| High                   | Moderate              | Young    | 1       |
-| Low                    | High                  | Moderate | 2       |
-| High                   | High                  | Moderate | 3       |
+Has_Children | Income | Age | Education | Accepted_Cmp_Total | Mnt_Total | Cluster
+--- | --- | --- | --- | --- | --- | ---
+High | Moderate | High | Moderate | Moderate | Moderate | 0 
+High | Low | Low | Low | Low | Low | 1
+Low | High | Moderate | High | High | High | 2
 
