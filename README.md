@@ -21,7 +21,7 @@ offer were properly labeled.
 &nbsp;<a href="https://www.linkedin.com/in/brunofcb/">
   <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white">
 </a>&nbsp;
-## [Step 1: EDA.ipynb](https://github.com/BrunoFelipeCB/Case-Ifood/blob/main/notebooks/01-%20EDA.ipynb)
+## [Step 1: EDA](https://github.com/BrunoFelipeCB/Case-Ifood/blob/main/notebooks/01-%20EDA.ipynb)
 - In the first notebook, I imported the original dataset and performed checks to assess the data integrity.
 - I imported the [ydata_profiling](https://github.com/ydataai/ydata-profiling) library to assist me in conducting analyses, generating a [report](https://github.com/BrunoFelipeCB/Case-Ifood/tree/main/report).
 - I adjusted the date column.
